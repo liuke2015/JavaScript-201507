@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>无标题文档</title>
 <style type="text/css">
-#div1,#div2,#div3{ width:100px; height:100px; background:red; position:absolute; top:0; left:200px; cursor:move;}
+#div1,#div2,#div3,#div4{ width:100px; height:100px; background:red; position:absolute; top:0; left:200px; cursor:move;}
 
 </style>
 </head>
@@ -13,6 +13,7 @@
 <div id="div1"></div>
 <div id="div2" style="left:200px; top:200px; background:black;"></div>
 <div id="div3" style="left:400px; top:300px; background:green;"></div>
+<div id="div4" style="left:400px; top:400px; background:blue;"></div>
 </body>
 </html>
 <script src="event.js"></script>
@@ -21,6 +22,7 @@ var ele=document.getElementById("div1");
 on(ele,"mousedown",down);
 on(div2,"mousedown",down);
 on(div3,"mousedown",down);
+on(div4,"mousedown",down);
 //以下方法里，this默认的原则是指向被拖拽的元素
 function down(e){//做准备拖拽
 	this.x=this.offsetLeft//盒子的老位置

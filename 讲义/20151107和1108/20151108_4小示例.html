@@ -39,7 +39,7 @@ input.on鼠标离开的时候(onblur)=function(){
                 if(reg.test(this.value)){
                     this.value=this.defaultValue;
                 }else{
-                    this.value=this.value.replace(/\s+/g,"")
+                    this.value=this.value.replace(/\s+/g,"");
                     var regText=/^[\u4e00-\u9fa5a-z]+$/i;
                     if(!regText.test(this.value)){//不成功的时候
                         var oSpan=this.nextSibling;
